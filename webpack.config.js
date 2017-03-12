@@ -74,6 +74,9 @@ let config = {
         }),
         new webpack.optimize.OccurrenceOrderPlugin(),
         // new ExtractTextPlugin('styles.css'),
+        new webpack.DefinePlugin({
+            ENV: JSON.stringify(process.env.NODE_ENV),
+        }),
     ],
 }
 
