@@ -28,11 +28,13 @@ export default {
         background: #fff;
         border-radius: 2px;
         font-size: 18px;
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         padding: 20px;
         width: 320px;
         height: 180px;
         line-height: 24px;
+        transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+        animation: offtable 20s infinite;
+        animation-direction: alternate;
 
         h1, h2, a {
             color: #111;
@@ -40,5 +42,10 @@ export default {
             text-decoration: none;
         }
     }
+}
+
+@keyframes offtable {
+  20%   { @include shadow1; }
+  100% { @include shadow3; }
 }
 </style>
