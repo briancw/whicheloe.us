@@ -1,0 +1,35 @@
+{
+    "name": "whicheloe.us",
+    "version": "1.0.0",
+    "main": "index.js",
+    "author": "Brian Whicheloe",
+    "license": "MIT",
+    "scripts": {
+        "pack": "webpack --watch",
+        "pack-production": "NODE_ENV=production webpack",
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "connect-history-api-fallback": "^1.3.0",
+        "express": "^4.15.2",
+        "vue": "^2.2.2",
+        "vue-router": "^2.3.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "^6.7.7",
+        "babel-core": "^6.23.1",
+        "babel-loader": "^6.4.0",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-preset-es2015": "^6.22.0",
+        "babel-preset-stage-3": "^6.22.0",
+        "css-loader": "^0.27.1",
+        "file-loader": "^0.10.1",
+        "node-sass": "^4.5.0",
+        "sass-loader": "^6.0.3",
+        "style-loader": "^0.13.2",
+        "url-loader": "^0.5.8",
+        "vue-loader": "^11.1.4",
+        "vue-template-compiler": "^2.2.2",
+        "webpack": "^2.2.1"
+    }
+}
