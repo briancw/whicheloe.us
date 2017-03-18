@@ -4,7 +4,8 @@
     "description": "Brian Whicheloe",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#f00",
+    "background_color": "#4e4e4e",
+    "theme_color": "#4e4e4e",
     "icons": [{
         "src": "icons/w_48.png",
         "sizes": "48x48",
