@@ -1,6 +1,7 @@
 <template>
     <div class="home_page">
-        <div class="card">
+        <div class="w_background"></div>
+        <div class="card" @click="updateIcon">
             <h1>Brian Whicheloe</h1>
             <h2>Development Director</h2>
             <h2>Brian@<a href="http://clever.ly">clever.ly</a></h2>
@@ -11,6 +12,21 @@
 <script>
 export default {
     name: 'home',
+    data() {
+        return {
+            iconB: 0,
+        }
+    },
+    methods: {
+        updateIcon() {
+            let favicon = document.getElementById('favicon')
+            if (favicon.href.includes('favicon.ico') || favicon.href.includes('favicon_w.ico')) {
+                favicon.href = 'favicon_b.ico'
+            } else {
+                favicon.href = 'favicon_w.ico'
+            }
+        },
+    },
 }
 </script>
 
@@ -35,6 +51,7 @@ export default {
         transition: all 0.3s cubic-bezier(.25,.8,.25,1);
         animation: offtable 20s infinite;
         animation-direction: alternate;
+        z-index: 20;
 
         h1, h2, a {
             color: #111;
