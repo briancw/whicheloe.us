@@ -1,11 +1,11 @@
 <template>
     <div class="home_page">
         <div class="w_background"></div>
-        <div class="card" @click="updateIcon">
+        <section class="card" @click="updateIcon">
             <h1>Brian Whicheloe</h1>
             <h2>Development Director</h2>
             <h2>Brian@<a href="http://clever.ly">clever.ly</a></h2>
-        </div>
+        </section>
     </div>
 </template>
 
