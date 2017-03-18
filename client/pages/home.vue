@@ -21,9 +21,9 @@ export default {
         updateIcon() {
             let favicon = document.getElementById('favicon')
             if (favicon.href.includes('favicon.ico') || favicon.href.includes('favicon_w.ico')) {
-                favicon.href = 'favicon_b.ico'
+                favicon.href = 'icons/favicon_b.ico'
             } else {
-                favicon.href = 'favicon_w.ico'
+                favicon.href = 'icons/favicon_w.ico'
             }
         },
     },
