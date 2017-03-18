@@ -14,17 +14,23 @@ export default {
     name: 'home',
     data() {
         return {
-            iconB: 0,
+            isVariant: false,
         }
     },
     methods: {
         updateIcon() {
             let favicon = document.getElementById('favicon')
-            if (favicon.href.includes('favicon.ico') || favicon.href.includes('favicon_w.ico')) {
+            let themeColor = document.getElementById('theme_color')
+
+            if (this.isVariant) {
                 favicon.href = 'icons/favicon_b.ico'
+                themeColor.content = '#4e4e4e'
             } else {
                 favicon.href = 'icons/favicon_w.ico'
+                themeColor.content = '#347ca7'
             }
+
+            this.isVariant = !this.isVariant
         },
     },
 }
