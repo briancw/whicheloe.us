@@ -5,6 +5,8 @@
             <h1>Brian Whicheloe</h1>
             <h2>Development Director</h2>
             <h2>Brian@<a href="http://clever.ly">clever.ly</a></h2>
+
+            <a class="twitter_link" href="https://twitter.com/brianwhicheloe" target="_blank"></a>
         </section>
     </div>
 </template>
@@ -47,6 +49,7 @@ export default {
 
     .card {
         @include roboto;
+        position: relative;
         background: #fff;
         border-radius: 2px;
         font-size: 18px;
@@ -63,6 +66,16 @@ export default {
             color: #111;
             font-weight: 400;
             text-decoration: none;
+        }
+
+        .twitter_link {
+            display: inline-block;
+            position: absolute;
+            background-image: url('../img/twitter_logo.svg');
+            width: 32px;
+            height: 32px;
+            bottom: 8px;
+            right: 12px;
         }
     }
 }
