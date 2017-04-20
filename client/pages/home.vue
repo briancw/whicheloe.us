@@ -3,8 +3,8 @@
         <div class="w_background"></div>
         <section class="card" @click="updateIcon">
             <h1>Brian Whicheloe</h1>
-            <h2>Development Director</h2>
-            <h2>Brian@<a href="http://clever.ly">clever.ly</a></h2>
+            <h2>Full Stack Developer</h2>
+            <h2>Brian@whicheloe.us</h2>
 
             <a class="twitter_link" href="https://twitter.com/brianwhicheloe" target="_blank"></a>
         </section>
