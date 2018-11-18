@@ -3,15 +3,9 @@
 </template>
 
 <script>
+import '../styles/global.less'
 export default {
     name: 'app',
 }
 </script>
 
-<style lang="scss">
-@import '../styles/_main.scss';
-
-html, body {
-    height: 100%;
-}
-</style>

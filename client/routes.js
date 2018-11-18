@@ -9,7 +9,7 @@ Vue.use(Router)
  */
 function loadPage(templateName) {
     // TODO switch to import when that's a bit more stable
-    return () => System.import(`./pages/${templateName}.vue`)
+    return () => import(`./pages/${templateName}.vue`)
 }
 
 const home = loadPage('home')
@@ -18,9 +18,16 @@ const routes = [
     {path: '/', component: home, meta: {title: 'Welcome'}},
 ]
 
-let router = new Router({
+let options = {
     mode: 'history',
     routes,
-})
+    scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        }
 
-export default router
+        return {x: 0, y: 0}
+    },
+}
+
+export default () => new Router(options)

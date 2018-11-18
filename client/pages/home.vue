@@ -6,7 +6,8 @@
             <h2>Full Stack Developer</h2>
             <h2>Brian@whicheloe.us</h2>
 
-            <a class="twitter_link" href="https://twitter.com/brianwhicheloe" target="_blank"></a>
+            <a class="github_link" href="https://github.com/briancw" target="_blank"></a>
+            <!-- <a class="twitter_link" href="https://twitter.com/brianwhicheloe" target="_blank"></a> -->
         </section>
     </div>
 </template>
@@ -17,6 +18,11 @@ export default {
     data() {
         return {
             isVariant: false,
+        }
+    },
+    meta() {
+        return {
+            description: 'Brian Whicheloe is a full stack, full time developer. He was most recently the Director of Development at Clever.ly. He\'s currently specializing in full stack Javascript',
         }
     },
     methods: {
@@ -38,8 +44,8 @@ export default {
 }
 </script>
 
-<style lang="scss">
-@import '../styles/mixins.scss';
+<style lang="less">
+@import '../styles/mixins.less';
 .home_page {
     background: #f1f1f1;
     display: flex;
@@ -48,7 +54,7 @@ export default {
     height: 100%;
 
     .card {
-        @include roboto;
+        .roboto();
         position: relative;
         background: #fff;
         border-radius: 2px;
@@ -68,10 +74,11 @@ export default {
             text-decoration: none;
         }
 
-        .twitter_link {
+        .github_link {
             display: inline-block;
             position: absolute;
-            background-image: url('../img/twitter_logo.svg');
+            background-image: url('../img/github_64.png');
+            background-size: 32px 32px;
             width: 32px;
             height: 32px;
             bottom: 8px;
@@ -81,7 +88,7 @@ export default {
 }
 
 @keyframes offtable {
-  20%   { @include shadow1; }
-  100% { @include shadow3; }
+  20% { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
+  100% { box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); }
 }
 </style>

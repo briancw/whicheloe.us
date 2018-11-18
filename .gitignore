@@ -1,3 +1,5 @@
 node_modules
 npm-debug.log
-public/dist/
+dist/
+stats.html
+certs/
