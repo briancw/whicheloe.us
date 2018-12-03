@@ -1,6 +1,7 @@
 import Vue from 'vue'
-// import VueAnalytics from 'vue-analytics'
+import VueAnalytics from 'vue-analytics'
 import createApp from './create_app.js'
+import {gaDevId, gaProductionId} from '../config.js'
 
 const {app, store, router} = createApp()
 
@@ -8,31 +9,11 @@ if (window.__INITIAL_STATE__) {
     store.replaceState(window.__INITIAL_STATE__)
 }
 
-// let id = ENV === 'production' ? 'UA-28431964-14' : 'UA-93531536-3'
-
-// TODO
-// CHANGEME
-// let gaID
-// if (process.env.NODE_ENV === 'development') {
-//     gaID = 'UA-XXX-X' // Dev gaID
-// } else {
-//     gaID = 'UA-XXX-X' // Live gaID
-// }
-
-// Vue.use(VueAnalytics, {
-//     id: gaID,
-//     router,
-//     ignoreRoutes: ['admin'],
-//     ecommerce: {
-//         enabled: true,
-//         enhanced: true,
-//     },
-//     // debug: {
-//     //     enabled: true,
-//     //     trace: false,
-//     //     sendHitTask: true,
-//     // },
-// })
+const gaId = (process.env.NODE_ENV === 'development') ? gaDevId : gaProductionId
+Vue.use(VueAnalytics, {
+    id: gaId,
+    router,
+})
 
 if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
     window.addEventListener('load', function() {
