@@ -1,0 +1,7 @@
+{
+    "apps": [{
+        "name": "whicheloe",
+        "script": "npm",
+        "args": "run production"
+    }]
+}
