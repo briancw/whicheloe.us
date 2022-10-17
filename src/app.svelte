@@ -1,3 +1,7 @@
+<script>
+    import './styles/global.less'
+</script>
+
 <main class="home_page">
     <div class="w_background"></div>
     <section class="card">
@@ -5,12 +9,13 @@
         <h2>Full Stack Developer</h2>
         <h2>Brian@whicheloe.us</h2>
 
-        <a class="github_link" href="https://github.com/briancw" target="_blank" rel="noreferrer"></a>
+        <a class="github_link" href="https://github.com/briancw" target="_blank" rel="noreferrer">
+            <span class="github_link_content">Github</span>
+        </a>
     </section>
 </main>
   
 <style lang="less">
-    @import './styles/mixins.less';
     .home_page {
         background: #f1f1f1;
         display: flex;
@@ -19,7 +24,9 @@
         height: 100%;
     
         .card {
-            .roboto();
+            font-family: 'Roboto', sans-serif;
+            font-style: normal;
+            font-weight: 400;
             position: relative;
             background: #fff;
             border-radius: 2px;
@@ -48,6 +55,10 @@
                 height: 32px;
                 bottom: 8px;
                 right: 12px;
+            }
+
+            .github_link_content {
+                display: none;
             }
         }
     }
