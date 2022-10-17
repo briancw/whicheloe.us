@@ -5,7 +5,10 @@
     "author": "Brian Whicheloe",
     "type": "module",
     "scripts": {
-        "dev": "vite"
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "lint": "eslint ."
     },
     "dependencies": {
         "@sveltejs/vite-plugin-svelte": "^1.0.2",
