@@ -3,7 +3,7 @@
 </script>
 
 <main class="home_page">
-    <div class="w_background"></div>
+    <div class="w_background" />
     <section class="card">
         <h1>Brian Whicheloe</h1>
         <h2>Full Stack Developer</h2>
@@ -14,7 +14,7 @@
         </a>
     </section>
 </main>
-  
+
 <style lang="less">
     .home_page {
         background: #f1f1f1;
@@ -22,7 +22,7 @@
         align-items: center;
         justify-content: center;
         height: 100%;
-    
+
         .card {
             font-family: 'Roboto', sans-serif;
             font-style: normal;
@@ -35,17 +35,19 @@
             width: 320px;
             height: 180px;
             line-height: 24px;
-            transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             animation: offtable 20s infinite;
             animation-direction: alternate;
             z-index: 20;
-    
-            h1, h2, a {
+
+            h1,
+            h2,
+            a {
                 color: #111;
                 font-weight: 400;
                 text-decoration: none;
             }
-    
+
             .github_link {
                 display: inline-block;
                 position: absolute;
@@ -62,10 +64,13 @@
             }
         }
     }
-    
+
     @keyframes offtable {
-        20% { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-        100% { box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); }
+        20% {
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+        }
+        100% {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+        }
     }
-    </style>
-  
+</style>

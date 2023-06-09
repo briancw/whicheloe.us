@@ -1,13 +1,5 @@
 module.exports = {
-    extends: 'brian',
-    plugins: [
-        'svelte3',
-    ],
-    overrides: [{
-        // Enable eslint in svelte components
-        files: ['*.svelte'],
-        processor: 'svelte3/svelte3',
-    }],
+    extends: ['brian', 'prettier', 'plugin:svelte/recommended'],
     env: {
         browser: true,
     },
@@ -16,5 +8,6 @@ module.exports = {
         'no-multiple-empty-lines': ['error', {max: 1, maxBOF: 2, maxEOF: 0}],
         // This rule is incompatibile with Svelte-Preprocessor
         'import/namespace': 'off',
+        'import/no-unresolved': 'off',
     },
 }
